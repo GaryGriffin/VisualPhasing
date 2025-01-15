@@ -50,3 +50,8 @@ If you want to create a segment list to export from the visual phasing, click th
 If you change the color for the format labeling in the Grandparent Table, you should click Legend Format Update for that change to propagate to the chromosome sheets. 
 
 If you have loaded the FIR Data into the FIR sheet, you can copy each chromosome FIR data to the appropriate sheet by clicking the Load FIR Data button. 
+
+SAMPLE DATA
+
+The SampleData.zip file is a complete set of sample data with a spreadsheet set up for using this data. This can be used for learning how to use the program.
+
