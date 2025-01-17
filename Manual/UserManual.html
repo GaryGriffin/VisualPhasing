@@ -1,16 +1,20 @@
 <h1>Introduction</h1>
 <p>
-	This spreadsheet allows the user to perform Visual Phasing of the graphs from GEDmatch. This assumes the user is familiar with the Visual Phasing process (not described here). 
+	This LibreOffice spreadsheet allows the user to perform Visual Phasing of the graphs from GEDmatch or any other source of segment graphs. This assumes the user is familiar with the Visual Phasing process (not described here). LibreOffice Calc is available on a variety of Operating Systems, including Windows, Linux, and MacOS. GEDmatch is the most common source for segment images, but any other source will also work. Scripts are provided to assemble and name files from GEDmatch. 
 </p>
 <h1>Installation</h1>
 <p>
-	The first step to use this spreadsheet is to generate all of the GEDmatch graphs. The user runs the One to One Autosomal and the One to One X options in GEDmatch for each pair of kits (both Sibling and Cousin) and saves the Web Page from the browser into the working directory. This working directory also contains the spreadsheet. For 4 siblings, this is 6 cases. 
+	The graphs need to be organized in a specific way. The folder GEDmatchImages contains all of the graphs. The graphs should be named kit1_kit2_Chromosome_Number.gif . For example, for the 1st image of Chromosome 13 for kit comparison of X0001 and C0001, the file is named X0001_C0001_13_1.gif . There are 2 images for each case, the 1st is the Full/Half/NoMatch image of the SNP match and the second is the validity of segment indicator for the SNP. The graph can be linear in SNP or linear in Mbp. If they are linear in Mbp, there is a macro to determine MBP based on the width of the spreadsheet cell. This will not work for GEDmatch images since those images are not linear in Mbp.
+</p>
+
+<p>
+	The first step to use this spreadsheet is to generate all of the GEDmatch graphs. The user runs the One-to-One Autosomal and the One-to-One X tools in GEDmatch for each pair of kits (both Sibling and Cousin) and saves the Web Page from the browser into the working directory. This working directory also contains the spreadsheet. For 4 siblings, this is 6 cases. 
 <br/>
 	For the SampleData case, the folder looks like:
 </p>
 <img src="TopFolderView.png" alt="TopFolderView" width="408" height="140" />
 <p>
-	The contents of each of the folders is the graphs for that match case. An example is:
+	The contents of each of the folders is the graphs for that match case. Note that the naming is not the same as what this tool needs. An example is:
 </p>
 <img src="OriginalFolderView.png" alt="OriginalFolderView" width="433" height="87" />
 <p>
@@ -22,10 +26,16 @@
 </p>
 <h1>Starting</h1>
 <p>
-	The first step is to fill the Sibling and Cousin Tables with the kit information. Once that is done, the user clicks the <strong>Reset Sheets</strong> button to remove any existing Chromosome sheets and to recreate based on the data in the Sibling Table. The results are:
+	The first step is to fill the Sibling and Cousin Tables with the kit information.
 </p>
 <img src="InitialView.png" alt="1-0 Initial View" width="640" height="360" />
+<p>
+	Once that is done, the user clicks the <strong>Reset Sheets</strong> button to remove any existing Chromosome sheets and to recreate based on the data in the Sibling Table. The results are:
+</p>
 <img src="ResetSheetsView.png" alt="ResetSheetsView" width="640" height="360" />
+<p>
+	Chromsome 13 looks like:
+</p>
 <img src="ResetSheetsChr13.png" alt="ResetSheetsChr13" width="640" height="360" />
 <h1>Loading Images</h1>
 <p>
@@ -33,7 +43,7 @@
 </p>
 <img src="LoadImagesChr13.png" alt="LoadImagesChr13" width="640" height="360" />
 <h1>Visual Phasing</h1>
-<h2>Initial Phasing</h2>
+<h2>Start of Visual Phasing</h2>
 <p>
 	Then proceed with moving the cell borders to identify recombination points and populate the owner of the recombination points. And start identifying the grandparent for each of the siblings segments. 
 </p>
@@ -48,7 +58,7 @@
 <p>
 	To add the Cousin graphs, go to the Main sheet and press the <strong>Show Cousins</strong> button. This adds all of the Cousin graphs to each of the Chromosome sheets. To omit a Cousin graph, put any character in the skip (1st) cell in the Cousins table. 
 </p>
-<h2>Final Phasing</h2>
+<h2>Finish of Visual Phasing</h2>
 <p>
 	When visual phasing is complete, the image should be something like the below.
 </p>
@@ -59,6 +69,9 @@
 	FIR data can be generated in GEDmatch for each of the Sibling pairs. This is OPTIONAL. This data can be copied into the FIR sheet by clicking the <strong>Load FIR Data</strong> and then used as a reference when identifying the Mbp for a recombination point. 
 </p>
 <img src="InitialViewFIR.png" alt="InitialViewFIR" width="640" height="360" />
+<p>
+	Chromsome 13 looks like:
+</p>
 <img src="FinalPhasingChr13FIR.png" alt="FinalPhasingChr13FIR" width="640" height="360" />
 <p>
 	After the recombination points have been identified and the Mbp for each has been entered, the final sheet should be:
