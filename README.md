@@ -2,7 +2,7 @@
 
 
 
-Visual Phasing of genealogy DNA data identifies the grandparents for specific DNA segments. This includes a Libre Office spreadsheet to perform Visual Phasing from GEDmatch graphs. The process for using this spreadsheet is
+Visual Phasing of genealogy DNA data identifies the grandparents for specific DNA segments. This includes a LibreOffice Calc spreadsheet to perform Visual Phasing from GEDmatch graphs or any other source of segment images. The process for using this spreadsheet is
 
 SETUP
 
